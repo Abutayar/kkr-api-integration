@@ -1,0 +1,182 @@
+<section class="tataAiA-Inner mb-5">
+  <div class="container">
+      <div class="row">
+          <div class="col-md-12">
+              <div class="customform">
+                  <div class="RegisterForm">
+                      <div>
+                          <div>
+                            <div class="header">
+                              <div class="header-title">
+
+                                <h6>Please register with the below details:</h6>
+                              </div>
+                            </div>
+
+                              <div id="Register" class="content">
+                                  <form id="registration" name="registration" [formGroup]="registrationForm">
+                                      <div class="row">
+                                          <div class="col-md-12">
+                                              <div *ngIf="alert" [class]="alertClass" role="alert">
+                                                {{alertMessageText}}
+                                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                                  <span aria-hidden="true">&times;</span>
+                                                </button>
+                                              </div>
+                                          </div>
+                                      </div>
+                                      <div class="row">
+                                          <div class="col-md-6">
+                                              <div class="form-group">
+                                                  <select id="region" name="region" placeholder="Name*"
+                                                      class="form-control" formControlName="region_id" required>
+                                                      <option value="" [disabled]="true">Select Region</option>
+                                                      <option *ngFor="let region of regionList;"
+                                                          [value]="region.id">{{region.region_name}}</option>
+                                                  </select>
+                                                  <div *ngIf="registrationForm.controls['region_id'].invalid && (registrationForm.controls['region_id'].dirty || registrationForm.controls['region_id'].touched || formSubmitted)"
+                                                      class="input-error-message">
+                                                      <div *ngIf="registrationForm.controls['region_id'].errors.required">
+                                                          Region is required</div>
+                                                  </div>
+                                              </div>
+                                          </div>
+                                      </div>
+                                      <div class="row">
+                                          <div class="col-md-10">
+                                              <div class="form-group">
+                                                  <input type="text" id="name" name="name" placeholder="Name*"
+                                                      class="form-control" formControlName="name" required>
+                                                  <div *ngIf="registrationForm.controls['name'].invalid && (registrationForm.controls['name'].dirty || registrationForm.controls['name'].touched || formSubmitted)"
+                                                      class="input-error-message">
+                                                      <div *ngIf="registrationForm.controls['name'].errors.required">
+                                                          Name is required</div>
+                                                  </div>
+                                              </div>
+                                          </div>
+                                      </div>
+                                      <div class="row">
+                                          <div class="col-md-12 form-group">
+                                              <div class="custom-control custom-radio custom-control-inline">
+                                                  <input type="radio" class="custom-control-input" id="gender_male" name="gender" [value]="'male'" formControlName="gender">
+                                                  <label class="custom-control-label" for="gender_male">Male</label>
+                                              </div>
+                                              <div class="custom-control custom-radio custom-control-inline">
+                                                  <input type="radio" class="custom-control-input" id="gender_female" name="gender" [value]="'female'" formControlName="gender">
+                                                  <label class="custom-control-label" for="gender_female">Female</label>
+                                              </div>
+                                              <div *ngIf="registrationForm.controls['gender'].invalid && (registrationForm.controls['gender'].dirty || registrationForm.controls['gender'].touched || formSubmitted)"
+                                                  class="input-error-message">
+                                                  <div *ngIf="registrationForm.controls['gender'].errors.required">
+                                                      Gender is required</div>
+                                              </div>
+                                          </div>
+                                      </div>
+                                      <div class="row">
+                                          <div class="col-md-4">
+                                              <div class="form-group">
+                                                  <input type="text" id="age" name="age" placeholder="Age*"
+                                                      class="form-control" formControlName="age" required>
+                                                  <div *ngIf="registrationForm.controls['age'].invalid && (registrationForm.controls['age'].dirty || registrationForm.controls['age'].touched || formSubmitted)"
+                                                      class="input-error-message">
+                                                      <div *ngIf="registrationForm.controls['age'].errors.required">
+                                                          Age is required</div>
+                                                      <div *ngIf="registrationForm.controls['age'].errors.pattern">Age
+                                                          is invalid</div>
+                                                  </div>
+                                              </div>
+                                          </div>
+                                          <div class="col-md-4">
+                                              <div class="form-group">
+                                                  <input type="text" id="mobile" name="mobile" placeholder="Mobile*"
+                                                      class="form-control" formControlName="mobile" required>
+                                                  <div *ngIf="registrationForm.controls['mobile'].invalid && (registrationForm.controls['mobile'].dirty || registrationForm.controls['mobile'].touched || formSubmitted)"
+                                                      class="input-error-message">
+                                                      <div
+                                                          *ngIf="registrationForm.controls['mobile'].errors.required">
+                                                          Mobile No. is required</div>
+                                                      <div *ngIf="registrationForm.controls['mobile'].errors.pattern">
+                                                          Mobile no. is invalid</div>
+                                                  </div>
+                                              </div>
+                                          </div>
+                                          <div class="col-md-4">
+                                              <div class="form-group">
+                                                  <input type="text" id="otp" name="otp" placeholder="OTP"
+                                                      class="form-control" formControlName="otp" required>
+                                                  <input type="button" class="otpbtn" id="otpbtn" value="Generate OTP"
+                                                       [disabled]="registrationForm.controls['mobile'].invalid" >
+                                                  <div *ngIf="registrationForm.controls['otp'].invalid && (registrationForm.controls['otp'].dirty || registrationForm.controls['otp'].touched || formSubmitted)"
+                                                      class="input-error-message">
+                                                      <div *ngIf="registrationForm.controls['otp'].errors.required">
+                                                          OTP is required.</div>
+                                                      <div *ngIf="registrationForm.controls['otp'].errors.pattern">OTP
+                                                          is invalid</div>
+                                                  </div>
+                                              </div>
+                                          </div>
+                                      </div>
+                                      <div class="row">
+                                          <div class="col-md-6">
+                                              <div class="form-group">
+                                                  <input type="text" id="pincode" name="pincode"
+                                                      placeholder="Pincode*" class="form-control"
+                                                      formControlName="pincode" required>
+                                                  <div *ngIf="registrationForm.controls['pincode'].invalid && (registrationForm.controls['pincode'].dirty || registrationForm.controls['pincode'].touched || formSubmitted)"
+                                                      class="input-error-message">
+                                                      <div
+                                                          *ngIf="registrationForm.controls['pincode'].errors.required">
+                                                          Pincode is required</div>
+                                                      <div
+                                                          *ngIf="registrationForm.controls['pincode'].errors.pattern">
+                                                          Pincode is invalid</div>
+                                                  </div>
+                                              </div>
+                                          </div>
+                                      </div>
+                                      <div class="row">
+                                          <div class="col-md-10">
+                                              <div class="form-group">
+                                                  <input type="email" id="email" name="email"
+                                                      placeholder="Enter Email*" class="form-control"
+                                                      formControlName="email" required>
+                                                  <div *ngIf="registrationForm.controls['email'].invalid && (registrationForm.controls['email'].dirty || registrationForm.controls['email'].touched || formSubmitted)"
+                                                      class="input-error-message">
+                                                      <div *ngIf="registrationForm.controls['email'].errors.required">
+                                                          Email is required</div>
+                                                      <div *ngIf="registrationForm.controls['email'].errors.pattern">
+                                                          Email is invalid</div>
+                                                  </div>
+                                              </div>
+                                          </div>
+                                      </div>
+                                      <div class="row">
+                                          <div class="col-md-7">
+                                              <div class="form-group">
+                                                  <input type="text" id="leader_ref_code" name="leader_ref_code"
+                                                      placeholder="Leader Reference Code*" class="form-control"
+                                                      formControlName="leader_ref_code">
+                                                  <div *ngIf="registrationForm.controls['leader_ref_code'].invalid && (registrationForm.controls['leader_ref_code'].dirty || registrationForm.controls['leader_ref_code'].touched || formSubmitted)"
+                                                      class="input-error-message">
+                                                      <div *ngIf="registrationForm.controls['leader_ref_code'].errors.required">
+                                                          Leader reference code is required</div>
+                                                      <div
+                                                          *ngIf="registrationForm.controls['leader_ref_code'].errors.pattern">
+                                                          Leader reference code is invalid</div>
+                                                  </div>
+                                              </div>
+                                          </div>
+                                      </div>
+                                      <div class="registerBut">
+                                          <button class="btn enterBtn" (click)="submitRegistration()" [disabled]="loading">SUBMIT</button>
+                                      </div>
+                                  </form>
+                              </div>
+                            </div>
+                        </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>

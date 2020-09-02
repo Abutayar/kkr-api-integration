@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'kkr-api-integration';
+  title = 'Tata AIA Life Insurance - Khwabon ka Rakshakaran';
 }

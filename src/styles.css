@@ -1,1 +1,445 @@
 /* You can add global styles to this file, and also import other style files */
+
+@font-face {
+  font-family: "TATA AIA Print";
+  src: url("assets/fonts/TATA-AIA-Print-Regular.ttf") format("truetype"),
+    url("assets/fonts/TATA-AIA-Print-Regular.woff2") format("woff2");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "TATA AIA Print";
+  src: url("assets/fonts/TATA-AIA-Print-Regular.ttf") format("truetype"),
+    url("assets/fonts/TATA-AIA-Print-Regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  background: url(assets/images/tata-aia-background.jpg) no-repeat bottom center;
+  background-size: cover;
+  font-family: "TATA AIA Print" !important;
+}
+.img-100 {
+  width: 100%;
+}
+.input-error-message {
+  color: red !important;
+  font-size: 12px !important;
+  text-align: left !important;
+}
+
+.tataaia-banner img {
+  width: 100%;
+}
+.tataaia-logo img {
+  width: 165px;
+}
+.header-top {
+  padding: 32px 0;
+}
+.customform {
+  padding: 55px 112px;
+}
+.RegisterForm .header-title {
+  display: -webkit-inline-box;
+  display: -ms-inline-box;
+  display: inline-block;
+  width: 100%;
+  float: left;
+  margin: 10px 0 25px;
+}
+
+.header-title {
+  float: left;
+  position: relative;
+}
+
+.header-title h6 {
+  padding: 0px 11px;
+}
+.customform p {
+  color: #444444;
+  font-size: 17px;
+  line-height: 24px;
+}
+.RegisterForm .header .header-title {
+  color: #2571b3 !important;
+  background-color: #fff !important;
+}
+
+
+.RegisterForm .header{
+  display: inline-block;
+}
+
+.RegisterForm .header .header-title {
+  display: inline-block;
+  font-weight: bold;
+  font-size: 16px;
+  letter-spacing: 0.2px;
+}
+.RegisterForm .header .header-title:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #2571b3;
+  left: 0;
+  bottom: -4px;
+}
+.RegisterForm .content .form-control {
+  border: 1px solid #7e7e7e;
+  box-shadow: 1px 3px 5px rgba(70, 70, 69, 0.23);
+  border-radius: 0px;
+  height: 40px;
+  font-family: "Verdana";
+  padding-left: 10px;
+  font-size: 15px;
+}
+
+.RegisterForm {
+  padding-right: 22%;
+}
+
+
+.form-group {
+  margin-bottom: 1.3rem !important;
+  position: relative;
+}
+input.otpbtn {
+  position: absolute;
+  top: 6px;
+  right: 8px;
+  background-color: #2571b3;
+  color: #fff;
+  border: 0px;
+  border-radius: 5px;
+  font-size: 13px;
+  padding: 2px 6px;
+  font-family: "Verdana";
+  line-height: 23px;
+  cursor: pointer;
+}
+.registerBut .enterBtn {
+  background-color: #ff0000;
+  color: #fff;
+  text-transform: uppercase;
+  padding: 3px 14px;
+  font-size: 17px;
+  margin: 10px 0 0;
+  font-family: "Verdana";
+}
+.tataaia-content {
+  margin: 0 0 15px;
+}
+.tataaia-content p {
+  color: #4e4e4f;
+  text-align: justify;
+  font-size: 13px;
+  line-height: 18px;
+  margin: 0;
+}
+.tataaia-content a {
+  color: #4e4e4f;
+}
+.footerBottom {
+  padding: 0 35px 30px;
+}
+.footer-last {
+  position: relative;
+  border: 1px #626567 solid;
+  height: 50px;
+  float: left;
+  width: 100%;
+}
+.footer-last .leftCorner {
+  background-color: #1276b4;
+  width: 190px;
+  color: #fff;
+  font-size: 14px;
+  float: left;
+  font-family: "Helvetica";
+  text-align: center;
+  line-height: 16px;
+  position: relative;
+  padding: 8px 0;
+}
+.footer-last .rightTxt {
+  padding: 15px 4px 15px 214px;
+}
+.footer-last .rightTxt p {
+  font-size: 12px;
+  text-align: left;
+  margin: 0;
+  line-height: 15px;
+  color: #626567;
+  padding-top: 3px;
+}
+.leftCorner:after {
+  content: " ";
+  position: absolute;
+  right: -12px;
+  top: 11px;
+  border-top: 13px solid transparent;
+  border-right: none;
+  border-left: 13px solid #1276b4;
+  border-bottom: 13px solid transparent;
+}
+
+
+.alert-success {
+  color: #155724 !important;
+  background-color: #d4edda;
+  border-color: #c3e6cb;
+  padding: 8px 10px;
+  font-size: 16px !important;
+  text-align: center !important;
+  line-height: 19px !important;
+}
+.btn-theme-color {
+  background-color: #1276b4 !important;
+  color: #fff !important;
+}
+
+
+@media (min-width: 1400px) and (max-width: 1440px) {
+  .footer-last .rightTxt p {
+    font-size: 12.7px;
+  }
+}
+@media (min-width: 1200px) and (max-width: 1280px) {
+  .footer-last .rightTxt p {
+    font-size: 11px;
+  }
+  .footer-last .rightTxt {
+    padding: 15px 4px 15px 210px;
+  }
+}
+@media (min-width: 1900px) {
+  .footer-last .rightTxt p {
+    font-size: 18.4px;
+  }
+  .footer-last .rightTxt {
+    padding: 15px 4px 15px 220px;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  .customform {
+    padding: 38px 90px 66px;
+  }
+  .customform p {
+    font-size: 15px;
+    line-height: 22px;
+  }
+  .RegisterForm {
+    padding-right: 14%;
+  }
+  input.otpbtn {
+    font-size: 11px;
+  }
+  .footer-last .leftCorner {
+    width: 134px;
+    font-size: 10px;
+    line-height: 14px;
+  }
+  .leftCorner:after {
+    right: -7px;
+    top: 13px;
+    border-top: 9px solid transparent;
+    border-left: 9px solid #1276b4;
+    border-bottom: 9px solid transparent;
+  }
+  .footer-last {
+    height: 46px;
+  }
+  .footer-last .rightTxt {
+    padding: 7px 4px 7px 156px;
+  }
+  .footer-last .rightTxt p {
+    font-size: 11.7px;
+  }
+}
+@media (min-width: 481px) and (max-width: 767px) {
+  .tataaia-logo img {
+    width: 116px;
+  }
+  .footerBottom {
+    padding: 0 0px 18px;
+  }
+  .customform {
+    padding: 25px 0px 28px;
+  }
+  .customform p {
+    font-size: 13px;
+    line-height: 17px;
+  }
+  .RegisterForm {
+    padding-right: 0%;
+  }
+  input.otpbtn {
+    font-size: 11px;
+  }
+  .footer-last .leftCorner {
+    width: 134px;
+    font-size: 10px;
+    line-height: 14px;
+  }
+  .leftCorner:after {
+    right: -7px;
+    top: 13px;
+    border-top: 9px solid transparent;
+    border-left: 9px solid #1276b4;
+    border-bottom: 9px solid transparent;
+  }
+  .footer-last .rightTxt p {
+    font-size: 11px;
+    line-height: 12px;
+    padding-top: 0px;
+  }
+  .footer-last .rightTxt {
+    padding: 5px 4px 3px 147px;
+  }
+  .footer-last {
+    height: 46px;
+  }
+  .tataaia-content p {
+    font-size: 12px;
+    line-height: 16px;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .customform {
+    padding: 35px 0;
+  }
+  .customform p {
+    font-size: 15px;
+    line-height: 22px;
+  }
+  .RegisterForm {
+    padding-right: 0;
+  }
+  .webcastPaddingMid {
+    padding: 0 64px 18px;
+  }
+  .webcasting-iframe-inner iframe {
+    height: 300px;
+  }
+}
+@media (min-width: 576px) and (max-width: 767px) {
+  .alert-success {
+    font-size: 20px !important;
+  }
+}
+@media (min-width: 481px) and (max-width: 575px) {
+  .header-top {
+    padding: 22px 0;
+  }
+  .tataaia-content p {
+    font-size: 11px;
+    line-height: 15px;
+  }
+  .footer-last .leftCorner {
+    width: 120px;
+    font-size: 9px;
+    line-height: 12px;
+    padding: 5px 0;
+  }
+  .footer-last {
+    height: 36px;
+  }
+  .footer-last .rightTxt {
+    padding: 6px 4px 3px 133px;
+  }
+  .footer-last .rightTxt p {
+    font-size: 10px;
+    line-height: 12px;
+    padding-top: 0px;
+    line-height: 8px;
+  }
+  .registerBut .enterBtn {
+    font-size: 15px;
+    font-weight: bold;
+  }
+  .leftCorner:after {
+    top: 8px;
+  }
+  .alert-success {
+    font-size: 19px !important;
+  }
+}
+@media (min-width: 320px) and (max-width: 480px) {
+  .tataaia-logo img {
+    width: 116px;
+  }
+  .footerBottom {
+    padding: 0 0px 18px;
+  }
+  .customform {
+    padding: 18px 0px 18px;
+  }
+  .customform p {
+    font-size: 12px;
+    line-height: 15px;
+    text-align: justify;
+  }
+  .RegisterForm {
+    padding-right: 0%;
+  }
+  input.otpbtn {
+    font-size: 11px;
+  }
+  .footer-last .leftCorner {
+    width: 100%;
+    font-size: 10px;
+    line-height: 14px;
+  }
+  .leftCorner:after {
+    display: none;
+  }
+  .footer-last .rightTxt p {
+    font-size: 11px;
+    line-height: 12px;
+    padding-top: 0px;
+    text-align: justify;
+  }
+  .footer-last .rightTxt {
+    padding: 10px 10px;
+    float: left;
+    width: 100%;
+  }
+  .footer-last {
+    height: auto;
+    border: 1px #b1b2b3 solid;
+  }
+  .leftCorner br {
+    display: none;
+  }
+  .tataaia-content p {
+    font-size: 12px;
+    line-height: 16px;
+  }
+  .RegisterForm .content .form-control {
+    font-size: 13px;
+  }
+
+  .alert-success {
+    font-size: 15px !important;
+  }
+  .alert-success {
+    font-size: 14px !important;
+  }
+}
+@media (max-width: 330px) {
+  .alert-success {
+    font-size: 13px !important;
+  }
+  .alert-success {
+    font-size: 14px !important;
+  }
+}

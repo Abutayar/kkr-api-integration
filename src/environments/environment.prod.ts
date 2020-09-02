@@ -1,3 +1,4 @@
 export const environment = {
-  production: true
+  production: true,
+  apiUrl: "https://www.procialize.live/stage/tataaia/API/event_api_call"
 };
